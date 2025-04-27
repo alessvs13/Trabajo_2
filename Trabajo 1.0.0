@@ -1,0 +1,63 @@
+#Problema 1
+#este problema incluye 2 funciones y la suma total de ellas :)
+
+import math
+
+#Volumen de la esfera
+def V_Esfera(x,y):
+    z=4*math.pi*x**y/3
+    return z
+#si quieres saber el volumen de solo la esfera, activa la siguiente linea de codigo y desactiva la linea 7 return
+# print(f"este es el volumen de la esfera: {z}")
+    
+V_Esfera(3,3)
+
+#Volumen Cono
+
+def V_Cono(w,v,t):
+    v2=math.pi*w**v*t
+    return v2
+#si quieres saber el volumen de solo el cono, activa la siguiente linea de codigo y desactiva la linea 17 return
+# print(f"este es el volumen del cono: {v2}")
+
+V_Cono(4,2,9/2)
+
+#suma de los 2 volumenes para obtener el volumen total del solido
+#este comando solo funciona si las lineas 7 y 12 estan activadas, mas las lineas 9 y 19 tienen que estar desactivadas
+
+print(V_Cono(4,2,9/2)+V_Esfera(3,3))
+
+
+
+
+import math
+
+def area_lateral_vagon(a, b, r):
+    """
+    Calcula el área lateral de un vagón compuesto por un rectángulo
+    y dos semicírculos (equivalentes a un círculo completo).
+    
+    Parámetros:
+    a -- altura del rectángulo
+    b -- base del rectángulo
+    r -- radio de las ruedas (semicírculos)
+
+    Retorna:
+    Área lateral total del vagón.
+    """
+    area_rectangulo = a * b
+    area_circulo = math.pi * (r ** 2)
+    area_total = area_rectangulo + area_circulo
+    return area_total
+
+# Ejemplo de uso
+# Datos dados
+a = 4    # altura en metros
+b = 10   # base en metros
+r = 1.5  # radio en metros
+
+# Cálculo del área
+area = area_lateral_vagon(a, b, r)
+
+# Resultado
+print(f"El área lateral del vagón es: {area:.4f} metros cuadrados")

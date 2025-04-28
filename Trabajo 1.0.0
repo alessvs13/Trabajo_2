@@ -59,5 +59,39 @@ r = 1.5  # radio en metros
 # Cálculo del área
 area = area_lateral_vagon(a, b, r)
 
+
 # Resultado
 print(f"El área lateral del vagón es: {area:.4f} metros cuadrados")
+
+
+
+def cantidad_carne_aves(N, M, K):
+    """
+    Calcula la cantidad total de carne de aves en kilos.
+
+    Parámetros:
+    N -- número de gallinas (6 kg cada una)
+    M -- número de gallos (7 kg cada uno)
+    K -- número de pollitos (1 kg cada uno)
+
+    Retorna:
+    Cantidad total de carne en kilos.
+    """
+    carne_gallinas = N * 6
+    carne_gallos = M * 7
+    carne_pollitos = K * 1
+    total_carne = carne_gallinas + carne_gallos + carne_pollitos
+    return total_carne
+
+# Ejemplo de uso
+# Datos de ejemplo
+N = 5   # 5 gallinas
+M = 3   # 3 gallos
+K = 10  # 10 pollitos
+
+# Cálculo de la carne total
+total = cantidad_carne_aves(N, M, K)
+
+# Mostrar resultado
+print(f"La cantidad total de carne de aves es: {total} kilos")
+
